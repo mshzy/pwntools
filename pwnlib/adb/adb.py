@@ -320,7 +320,7 @@ class AdbDevice(Device):
                     r.recvline() # Rest of the line
                     r.sendline('avd name')
                     self.avd = r.recvline().strip()
-            except:
+            except Exception:
                 pass
 
         self._initialized = True
